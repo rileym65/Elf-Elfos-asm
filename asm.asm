@@ -36,7 +36,7 @@ start:
            ldn     ra                  ; get byte
            lbnz    good                ; jump if nonzero
            sep     scall               ; otherwise display usage
-           dw      f_inmsg
+           dw      o_inmsg
            db      'Usage: asm filename',10,13,0
            sep     sret                ; and return to os
 good:      ldi     high symtab         ; set 0 pointer into symbol table
