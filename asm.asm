@@ -160,7 +160,7 @@ opened:    sep     scall               ; process the file
            phi     rd
            ldi     low fildes
            plo     rd
-           ldi     3                   ; flags create, truncate
+           ldi     11                  ; flags create, truncate, executable
            plo     r7
            sep     scall               ; attempt to open the file
            dw      o_open
